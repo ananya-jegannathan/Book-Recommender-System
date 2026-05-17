@@ -14,7 +14,7 @@ There are four data files used in this project:
 
 ### Important Caveats
 
-As only a subset of the data could be loaded to this repo, several functions will not run if different parameters than the ones in ```main.py``` are passed. These are mentioned in the code. If you change these parameters, the code will throw errors. For the full sized files, contact me at ananyajegannathan@gmail.com.
+This repo uses a subset of the full dataset for size constraints. The parameters in main.py are calibrated for this subset.
 
 ## Instructions
 
@@ -31,7 +31,7 @@ There are different functions in ```main.py ``` for running the recommender syst
 
 ## Details and Results
 
-For further insight into the theory behind the project and the results and conclusions, check out the [Project Report](https://github.com/ananyajn/Book-Recommender-System/blob/master/ECE697_Final_Project_Report.pdf).
+For further insight into the theory behind the project and the results and conclusions, check out the [Project Report](https://github.com/ananya-jegannathan/Book-Recommender-System/blob/master/ECE697_Final_Project_Report.pdf).
 
 ## Credits
 
