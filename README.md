@@ -1,48 +1,43 @@
 # Book-Recommender-System
 
-A book recommendation system built using collaborative filtering on Goodreads data. The system constructs a sparse user-book ratings matrix and applies two matrix completion algorithms to fill in missing ratings, then compares their performance.
+In this project, I aim to build a book recommender system using data from Goodreads. The data is used to create a sparse user-book ratings matrix, which is then filled using a matrix completion algorithm. The system runs two different matrix completion algorithms and compares their performance.
 
 ## Data Files
 
-The original Goodreads dataset is large; this repo uses curated subsets to keep it lightweight and reproducible.
+The original data obtained from Goodreads is very vast, so I have uploaded subsets of the data for this repo.
 
-Four data files are used:
-1. **some_goodreads_interactions.csv** — Ratings assigned by 1,000 users to a large number of books.
-2. **some_goodreads_books.csv** — Metadata for a select set of books.
-3. **some_book_id_map.csv** — Maps book IDs in the interactions file to IDs in the book metadata file.
-4. **goodreads_book_authors.csv** — Author information for the books.
+There are four data files used in this project:
+1. some_goodreads_interactions.csv: Contains the ratings assigned by 1000 users to a large number of books.
+2. some_goodreads_books.csv: Contains meta-data about a select number of books.
+3. some_book_id_map.csv: Maps the book IDs in the interactions file to the respective book IDs in the book meta-data file.
+4. goodreads_book_authors.csv: Contains information about the authors of the books.
 
-### Dataset Note
+### Important Caveats
 
-This repo uses a representative subset of the full Goodreads dataset. The hyperparameters in `main.py` are tuned for this subset. If you substitute the full dataset, expect longer runtimes and you may want to re-tune the matrix completion parameters accordingly.
+This repo uses a subset of the full dataset for size constraints. The parameters in main.py are calibrated for this subset.
 
 ## Instructions
 
-Install the required dependencies using:
+The *fancyimpute* library needs to be installed to run this code. This can be installed by running
 
-```bash
-pip install -r requirements.txt
-```
+```pip install fancyimpute```
 
-Or install the core library individually:
+Alternately, all the libraries needed to run this project can be found in ```requirements.txt```. They can be installed at once by running
 
-```bash
-pip install fancyimpute
-```
+```pip install -r requirements.txt```
 
-Once dependencies are installed, clone the repository and run:
-
-```bash
-python code/main.py
-```
-
-`main.py` contains separate functions for running the recommender system and for evaluating algorithm performance. Comment out whichever you don't need before running.
+Once the requirements have been installed, the project can be executed by downloading the repository and running ```\code\main.py```.
+There are different functions in ```main.py ``` for running the recommender system and for algorithm performance evaluation. If you want to run one at a time, comment out the others.
 
 ## Details and Results
 
-For the theory, methodology, and results, see the [Project Report](https://github.com/ananya-jegannathan/Book-Recommender-System/blob/main/ECE697_Final_Project_Report.pdf).
+For further insight into the theory behind the project and the results and conclusions, check out the [Project Report](https://github.com/ananya-jegannathan/Book-Recommender-System/blob/master/ECE697_Final_Project_Report.pdf).
 
 ## Credits
 
-1. Dataset source: [UCSD Book Graph](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/home)
-2. fancyimpute library: [iskandr/fancyimpute](https://github.com/iskandr/fancyimpute)
+1. The datasets can be obtained [here](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/home).
+2. More information on the *fancyimpute* library can be obtained [here](https://github.com/iskandr/fancyimpute)
+
+
+
+
